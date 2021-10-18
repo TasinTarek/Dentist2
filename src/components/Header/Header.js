@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css'
 import logo from '../../Images/Logo/cover.png'
 import Banner from '../Banner/Banner';
@@ -16,10 +16,11 @@ const Header = () => {
                         </div>
                         <div className="col-md-10">
                             <ul className="items d-flex align-items-end justify-content-end me-2">
-                                <li className="item"><Link to="/home">Home</Link></li>
-                                <li className="item"><Link to="/login">Login</Link></li>
-                                <li className="item"><Link to="/services">Services</Link></li>
-                                <li className="item"><Link to="/contact">Contact</Link></li>
+                                <li className="item"><NavLink to="/home">Home</NavLink></li>
+                                <li className="item"><NavLink to="/login">Login</NavLink></li>
+                                <li className="item"><NavLink to="/services">Services</NavLink></li>
+                                <li className="item"><NavLink to="/contact">Contact</NavLink></li>
+                                <li className="item"><NavLink to="/appointment">Appointment</NavLink></li>
                             </ul>
                         </div>
                         

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Col } from 'react-bootstrap';
+import { Button, Card, Col } from 'react-bootstrap';
 
 const Service = (props) => {
 
@@ -15,6 +15,7 @@ const Service = (props) => {
           <Card.Text>
             {description}
           </Card.Text>
+          <Button>Book Appointment</Button>
         </Card.Body>
       </Card>
     </Col> 

@@ -15,10 +15,10 @@ const Services = () => {
     return (
 
         
-        <div className="service">
-            <h1>Our Services</h1>
+        <div className="container ">
+            <h1 className="p-3">Our Services</h1>
         
-            <Row xs={1} md={2} className="g-4">
+            <Row xs={1} md={2} lg={3} className="g-4">
             {
                 services.map(service=> <Service service ={service}></Service>)
             }
