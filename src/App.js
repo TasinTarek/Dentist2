@@ -1,12 +1,16 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
-import Notfound from './components/Notfound/Notfound';
-import Login from './components/Login/Login'
+import NotFound from './components/Notfound/Notfound'
+
 import Header from './components/Header/Header';
-import Welcome from './components/Welcome/Welcome';
+
 import Services from './components/Services/Services';
+import Contact from './components/Contact/Contact';
+import Appointment from './components/Appointment/Appointment';
+import Login from './components/Login/Login';
+
 function App() {
   return (
     <div className="App">
@@ -14,6 +18,7 @@ function App() {
         <Header></Header>
         
         <Switch>
+          
           <Route path exact="/">
           <Home></Home>
           </Route>
@@ -26,8 +31,23 @@ function App() {
           <Route path="/services">
             <Services></Services>
           </Route>
+          <Route path="/contact">
+            <Contact></Contact>
+          </Route>
+          <Route path="/appointment">
+            <Appointment></Appointment>
+          </Route>
+          <Route exact path = "/*">
+            <NotFound></NotFound>
+          </Route>
         </Switch>
+        
+        
+          
+            
       </Router>
+      
+      
     </div>
   );
 }

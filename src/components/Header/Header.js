@@ -5,8 +5,8 @@ import logo from '../../Images/Logo/cover.png'
 import Banner from '../Banner/Banner';
 const Header = () => {
     return (
-        <div>
-            <div className="menubar-container container">
+        <div className="sticky-top">
+            <div className="menubar-container container ">
                 <div className="menubar">
                     <div className="row">
                         <div className="col-md-2">

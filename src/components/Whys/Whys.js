@@ -11,7 +11,7 @@ const Whys = () => {
     },[]);
     return (
         <div className="container">
-                <h1>Why Choose Us</h1>
+                <h1 className="p-3">Why Choose Us</h1>
             <Row xs={1} md={3} lg={3} className="g-4">
                 {
                     whys.map(why=> <Why why={why} ></Why>)
