@@ -1,28 +1,28 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import {GoogleAuthProvider,getAuth,signInWithPopup} from "firebase/auth";
-import initAuth from '../Firebase/Firebase.init';
-
-initAuth();
-
-const googleProvider = new GoogleAuthProvider();
-
+import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 
 const Login = () => {
 
-    const handleGoogle = () =>{
-            const auth = getAuth();
-            signInWithPopup(auth , googleProvider)
-            .then(result => {
-                const user = result.user;
-                console.log(user)
-            })
-    }
+    const { signInUsingGoogle} = useAuth();
     return (
         <div>
-            <Button onClick={handleGoogle}>Google Sign In</Button>
-            
+            <div>
+                <form onSubmit="">
+                    <h4>Sign In</h4>
+                    <input type="email" id="" placeholder="Email" />
+                    <br />
+                    <input type="password" id="" placeholder="Password" />
+                    <br />
+                    <Button>Login</Button>
+                    <p>New ?</p>
+                    <Link to="/register">Register</Link>
+                    </form>
+                    <div>------------or-------</div>
+                    <Button onClick={signInUsingGoogle}>Google</Button>
+            </div>
         </div>
     );
 };
